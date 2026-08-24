@@ -1,0 +1,11 @@
+@use "../../global" as *;
+
+.c-title{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: fluid-font(24, 30);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: 0;
+}

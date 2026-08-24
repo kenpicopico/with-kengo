@@ -1,0 +1,46 @@
+@use "../../global" as *;
+
+.c-button{
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 200px;
+    @include mq(pc){
+        padding: 6.9% 0;
+    }
+    &__text{
+        font-size: fluid-font(17, 18);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0;
+    }
+    &__arrow{
+        width: 3%;
+        position: absolute;
+        top: 50%;
+        right: 6.7%;
+        transform: translateY(-50%);
+    }
+    &--blue{
+        background: $light-blue;
+        border: 2px solid $light-blue;
+        &:hover{
+            @include mq(pc){
+                background: white;
+                border: 2px solid $light-blue;
+            }
+        }
+    }
+    &--white{
+        background: white;
+        border: 2px solid white;
+        &:hover{
+            @include mq(pc){
+                background: $light-blue;
+            }
+        }
+    }
+}

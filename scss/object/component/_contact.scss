@@ -1,0 +1,32 @@
+@use "../../global" as *;
+
+.c-contact{
+    width: 100%;
+    padding: 100px 0;
+    background: $yellow;
+    @include mq(pc){
+        padding: min(8.1vw,155.5px) 0 min(7.75vw,148.8px);
+    }
+    &__text{
+        margin-top: 60px;
+        text-align: center;
+        font-size: fluid-font(15, 16);
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 0.02em;
+        @include mq(pc){
+            margin-top: 5.5%;
+            letter-spacing: 0.1em;
+        }
+    }
+    &__button{
+        width: 280px;
+        margin: 40px auto 0;
+        @include mq(pc){
+            width: 34%;
+            min-width: 280px;
+            max-width: 479px;
+            margin: 5.3% auto 0;
+        }
+    }
+}

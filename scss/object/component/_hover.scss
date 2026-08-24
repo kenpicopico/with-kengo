@@ -1,0 +1,41 @@
+@use "../../global" as *;
+
+.c-hover{
+    &:hover{
+        .c-hover__img-zoom{
+            @include mq(pc){
+                transform: scale(1.1);
+            }
+        }
+        &.c-hover__underline::after{
+            @include mq(pc){
+                transform: scaleX(1);
+            }
+        }
+    }
+    &__img-zoom{
+        @include mq(pc){
+            transition: transform 0.3s ease;
+        }
+    }
+    &__underline{
+        @include mq(pc){
+            position: relative;
+        }
+        &::after {
+            @include mq(pc){
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                width: 100%;
+                height: 6px;
+                border-radius: 10px;
+                background-color: $light-blue;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+        }
+    }
+}

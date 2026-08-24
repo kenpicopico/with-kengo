@@ -1,0 +1,61 @@
+@use "../global" as *;
+
+.l-footer{
+    width: 100%;
+    padding: 7.7%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $text-black;
+    @include mq(pc){
+        padding: 2.3vw 0 1.6vw;
+        align-items: center;
+    }
+    &__nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include mq(pc){
+            align-items: center;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        @include mq(pc){
+            flex-direction: row;
+            align-items: center;
+            column-gap: 2vw;
+            row-gap: 0;
+        }
+    }
+    &__link{
+        font-family: "Roboto", sans-serif;
+        font-size: fluid-font(14, 16);
+        font-weight: 400;
+        color: white;
+        line-height: 1.5;
+    }
+    &__privacy{
+        margin-top: 15px;
+        line-height: 1.5;
+        font-size: fluid-font(13, 14);
+        font-weight: 400;
+        color: white;
+        @include mq(pc){
+            margin-top: 1.6%;
+        }
+    }
+    &__copyright{
+        margin-top: 80px;
+        line-height: 1.5;
+        font-size: fluid-font(13, 14);
+        font-weight: 400;
+        color: white;
+        @include mq(pc){
+            margin-top: 120px;
+        }
+    }
+}

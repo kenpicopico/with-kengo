@@ -1,0 +1,46 @@
+@use "../../../global" as *;
+
+.p-thanks-main{
+    width: 100%;
+    padding: 120px 0 60px;
+    @include mq(pc){
+        padding: 14% 0 7.8%;
+    }
+    &__title{
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: fluid-font(35, 40);
+        font-weight: 600;
+        font-style: italic;
+    }
+    &__subtitle{
+        margin-top: 10px;
+        text-align: center;
+        font-size: fluid-font(15, 16);
+        font-weight: 500;
+        line-height: 1.8;
+        @include mq(pc){
+            margin-top: 1%;
+        }
+    }
+    &__text{
+        margin-top: 60px;
+        text-align: center;
+        font-size: fluid-font(15, 16);
+        font-weight: 500;
+        line-height: 1.8;
+        @include mq(pc){
+            margin-top: 7.4%;
+        }
+    }
+    &__button{
+        width: 280px;
+        margin: 60px auto 0;
+        @include mq(pc){
+            width: 25%;
+            min-width: 280px;
+            max-width: 479px;
+            margin: min(7.8%,149px) auto 0;
+        }
+    }
+}

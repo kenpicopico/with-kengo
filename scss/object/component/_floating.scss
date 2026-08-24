@@ -1,0 +1,22 @@
+@use "../../global" as *;
+
+.c-floating-btn{
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 90px;
+    font-size: fluid-font(16, 18);
+    font-weight: 500;
+    border-radius: 200px;
+    background: $yellow;
+    z-index: 9;
+    @include mq(pc){
+        height: 60px;
+        padding: 0 42px;
+        right: 97px;
+    }
+}

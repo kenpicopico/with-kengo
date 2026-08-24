@@ -1,0 +1,15 @@
+@use "../../../global" as *;
+
+.p-privacy-mv{
+    width: 100%;
+    padding: 120px 0 60px;
+    @include mq(pc){
+        padding: 14% 0 7.8%;
+    }
+    &__title{
+        text-align: center;
+        font-size: fluid-font(26, 30);
+        font-weight: bold;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,87 @@
+@use "../../../global" as *;
+
+.p-top-mv{
+    width: 100%;
+    padding: 80px 0 145px;
+    position: relative;
+    background-image: linear-gradient(#fffbf4, #ebe7e1);
+    @include mq(pc){
+        padding: min(9.4%,160px) 0 min(5.5%,105px);
+        overflow: hidden;
+    }
+    &.is-show{
+        .p-top-mv__inner{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .p-top-mv__deco{
+            transform: translate(-50%,0);
+            opacity: 1;
+        }
+    }
+    &__inner{
+        width: 86%;
+        padding: 80px 30px 138px;
+        margin: 0 0 0 auto;
+        background: white;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        @include mq(pc){
+            padding: min(7%,134px) 5.6% min(12.5%,240px);
+        }
+    }
+    &__title{
+        font-size: fluid-font(26, 36);
+        font-weight: bold;
+        line-height: 1.7;
+        letter-spacing: 0.1em;
+    }
+    &__subtitle{
+        margin-top: 4rem;
+        font-weight: 400;
+        line-height: 1.8;
+        @include mq(pc){
+            margin-top: 2.3%;
+        }
+    }
+    &__text{
+        margin-top: 3rem;
+        font-weight: 400;
+        line-height: 1.8;
+        @include mq(pc){
+            margin-top: 2%;
+        }
+    }
+    &__button{
+        width: 280px;
+        margin-top: 4rem;
+        @include mq(pc){
+            width: 33.33%;
+            min-width: 280px;
+            max-width: 479px;
+            margin-top: 4.1%;
+        }
+    }
+    &__deco{
+        width: 93.8%;
+        max-width: 375px;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translate(-50%,50px);
+        opacity: 0;
+        transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease;
+        @include mq(600px){
+            width: 80%;
+            max-width: unset;
+        }
+        @include mq(pc){
+            width: 98%;
+            max-width: 1882px;
+            bottom: -4.8%;
+        }
+    }
+}

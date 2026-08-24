@@ -1,0 +1,1 @@
+<a href="#top" class="c-totop js-totop u-shadow"><img src="<?php echo $path; ?>img/arrow_down.svg" alt=""></a>

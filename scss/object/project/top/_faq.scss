@@ -1,0 +1,153 @@
+@use "../../../global" as *;
+
+.p-top-faq{
+    width: 100%;
+    padding: 100px 0;
+    background: $bg-beige;
+    @include mq(pc){
+        padding: min(8.1vw,155.5px) 0 min(9.4vw,180.5px);
+    }
+    &__list{
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        @include mq(pc){
+            margin-top: 6.6%;
+            row-gap: min(1.4vw,26.9px);
+        }
+    }
+    &__item{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+        @include mq(pc){
+            width: 100%;
+        }
+        &.is-active{
+            .p-top-faq__question{
+                background: $light-blue;
+                transition: background 0.3s ease;
+            }
+            .p-top-faq__question-arrow{
+                transform: translate(0,-50%) rotate(-90deg);
+                transition: transform 0.3s ease;
+            }
+            .p-top-faq__answer{
+                grid-template-rows:1fr;
+                transition: grid-template-rows 0.3s ease;
+            }
+            .p-top-faq__answer-inner{
+                padding: 15px;
+                transition: padding 0.4s ease;
+                @include mq(pc){
+                    padding: 2.3% 2.7%;
+                }
+            }
+
+        }
+    }
+    &__question{
+        width: 100%;
+        padding: 20px 40px 20px 15px;
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        background: white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        @include mq(pc){
+            padding: 2.3% 2.7%;
+        }
+        &-initial{
+            margin-right: 1.7%;
+            font-size: fluid-font(16, 18);
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+        &-text{
+            text-align: justify;
+            font-size: fluid-font(16, 18);
+            font-weight: 500;
+        }
+        &-arrow{
+            width: 8px;
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0,-50%) rotate(90deg);
+            transition: transform 0.3s ease;
+            @include mq(pc){
+                width: 1%;
+                right: 5%;
+            }
+        }
+    }
+    &__answer{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 0fr;
+        background: white;
+        transition: grid-template-rows 0.3s ease;
+        &-inner{
+            padding: 0 20px;
+            display: flex;
+            align-items: baseline;
+            overflow: hidden;
+            transition: padding 0.4s ease;
+            @include mq(pc){
+                padding: 0 2.7%;
+            }
+        }
+        &-initial{
+            margin-right: 1.7%;
+            font-size: fluid-font(16, 18);
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+        &-text{
+            text-align: justify;
+            font-size: fluid-font(15, 16);
+            font-weight: 500;
+        }
+    }
+    &__theme{
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: fluid-font(14, 15);
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0;
+    }
+    &__title{
+        margin-top: 2.3%;
+        display: inline-block;
+        position: relative;
+        font-size: fluid-font(18, 20);
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0;
+        z-index: 0;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 70%;
+            position: absolute;
+            bottom: -40%;
+            left: 0;
+            background-color: $light-blue;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    }
+    &__text{
+        margin-top: 2.3%;
+        text-align: center;
+        font-size: fluid-font(15, 16);
+        font-weight: 400;
+        line-height: 1.8;
+    }
+}

@@ -1,0 +1,17 @@
+
+@function fluid-font($min-px, $px-at-1280, $min-vw: 375, $design-vw: 1280, $max-vw: 1920) {
+  // 375px → 1280px の傾きを算出（デザイン通りの区間）
+  $slope: ($px-at-1280 - $min-px) / ($design-vw - $min-vw);
+
+  // その傾きを1920pxまで延長して推定値を算出
+  $max-px: $px-at-1280 + $slope * ($max-vw - $design-vw);
+
+  // 375〜1920で一貫した傾きなので、そのままclampの式に使える
+  $intercept: $min-px - $slope * $min-vw;
+
+  @return clamp(
+    #{$min-px / 10}rem,
+    #{$intercept / 10}rem + #{$slope * 100}vw,
+    #{$max-px / 10}rem
+  );
+}

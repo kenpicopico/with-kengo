@@ -1,0 +1,14 @@
+@use "../../global" as *;
+
+.u-sp-only{
+    display: block;
+    @include mq(pc){
+        display: none;
+    }
+}
+.u-pc-only{
+    display: none;
+    @include mq(pc){
+        display: block;
+    }
+}

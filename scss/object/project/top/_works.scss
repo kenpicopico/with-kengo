@@ -1,0 +1,70 @@
+@use "../../../global" as *;
+
+.p-top-works{
+    width: 100%;
+    padding: 100px 0;
+    background: white;
+    @include mq(pc){
+        padding: min(8.1vw,155.5px) 0 min(9.4vw,180.5px);
+    }
+    &__text{
+        margin-top: 10px;
+        text-align: center;
+        font-size: fluid-font(15, 16);
+        font-weight: 500;
+        line-height: 1.5;
+        @include mq(pc){
+            margin-top: 4.4%;
+        }
+    }
+    &__list{
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        @include mq(pc){
+            margin-top: 6.6%;
+            align-items: stretch;
+            column-gap: 4.2%;
+            row-gap: min(3.1vw,59.5px);
+        }
+    }
+    &__item{
+        width: 100%;
+        @include mq(pc){
+            width: 47.9%;
+        }
+    }
+    &__link{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__img{
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        img{
+            border-radius: 10px;
+        }
+    }
+    &__title{
+        margin-top: 10px;
+        font-size: fluid-font(17, 18);
+        font-weight: 700;
+        line-height: 1.5;
+        @include mq(pc){
+            margin-top: 4.4%;
+        }
+    }
+    &__skills{
+        margin-top: 8px;
+        font-size: fluid-font(14, 15);
+        font-weight: 500;
+        line-height: 1;
+        @include mq(pc){
+            margin-top: 3.3%;
+        }
+    }
+}

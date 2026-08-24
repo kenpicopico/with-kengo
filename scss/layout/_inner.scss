@@ -1,0 +1,12 @@
+@use "../global" as *;
+
+.l-inner{
+    width: 84.6%;
+    max-width: 600px;
+    margin: 0 auto;
+    @include mq(pc){
+        width: 73.4%;
+        min-width: 700px;
+        max-width: 1409px;
+    }
+}

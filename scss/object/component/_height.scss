@@ -1,0 +1,10 @@
+@use "../../global" as *;
+
+.c-height{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    &-auto{
+        flex: 1 0 auto;
+    }
+}

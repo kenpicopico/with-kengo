@@ -1,0 +1,19 @@
+
+
+html{
+    overflow: auto;
+    &.no-scroll{
+        overflow: hidden;
+    }
+    &.is-visited{
+        .p-loader{
+            display: none;
+        }
+    }
+}
+body{
+    overflow: auto;
+    &.no-scroll{
+        overflow: hidden;
+    }
+}

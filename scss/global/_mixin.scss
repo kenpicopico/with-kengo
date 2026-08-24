@@ -1,0 +1,20 @@
+@use "sass:map";
+
+$breakpoints: (
+  sm: 375px,
+  pc: 769px,
+  lg: 1024px,
+);
+
+@mixin mq($breakpoint: pc) {
+  // マップにキーがあればそれを使う、なければ直接pxとして扱う
+  $value: if(map.has-key($breakpoints, $breakpoint), map.get($breakpoints, $breakpoint), $breakpoint);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+/*
+@include mq(pc){}
+@include mq(1200px){}
+*/

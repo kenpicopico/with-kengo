@@ -1,0 +1,1 @@
+<a href="<?php echo $path; ?>contact/contact.php" class="c-floating-btn js-floating u-shadow">お問い合わせはこちら</a>

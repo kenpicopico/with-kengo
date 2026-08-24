@@ -1,0 +1,29 @@
+@use "../../../global" as *;
+
+.p-top-services{
+    width: 100%;
+    padding: 100px 0;
+    background: $bg-beige;
+    @include mq(pc){
+        padding: min(8.1vw,155.5px) 0 min(9.4vw,180.5px);
+    }
+    &__list{
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        @include mq(pc){
+            margin-top: 6.6%;
+            align-items: stretch;
+            column-gap: 4.2%;
+            row-gap: min(3.3vw,63.4px);
+        }
+    }
+    &__item{
+        width: 100%;
+        @include mq(pc){
+            width: 47.9%;
+        }
+    }
+}
