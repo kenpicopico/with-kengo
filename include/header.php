@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  viewport-fit=cover">
     <meta name="description" content="<?php echo $page_description; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="<?php echo $page_description; ?>">
+    <meta property="og:image" content="<?php echo $path; ?>img/works/with-kengo_top.webp" />
+    <meta property="og:url" content="https://with-kengo.com">
     <meta property="og:title" content="<?php echo $page_title; ?>">
     <meta property="og:description" content="<?php echo $page_description; ?>">
     <meta name="robots" content="noindex">
