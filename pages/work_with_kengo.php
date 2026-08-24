@@ -73,6 +73,12 @@ $page_description = '';
                     </li>
                 </ul>
             </div>
+            <div class="p-work-desc__button">
+                <a class="c-button c-button--white u-shadow" href="https://github.com/kenpicopico/with-kengo" target="_blank">
+                    <span class="c-button__text">Githubを見る</span>
+                    <img class="c-button__arrow" src="<?php echo $path; ?>img/arrow.svg" alt="">
+                </a>
+            </div>
         </section>
 
         <section class="p-work-gallery">
