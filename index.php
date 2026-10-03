@@ -288,6 +288,7 @@ $page_description = '';
         </section>
     </main>
 
+    <?php include($path . '/include/zenn.php'); ?>
     <?php include($path . '/include/floating.php'); ?>
     <?php include($path . '/include/totop.php'); ?>
     <?php include($path . '/include/footer.php'); ?>

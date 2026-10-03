@@ -20,3 +20,19 @@
         right: 97px;
     }
 }
+
+.c-zenn-btn{
+    width: 300px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 9;
+    @include mq(pc){
+        width: 29%;
+        max-width: 556px;
+        min-width: 320px;
+        bottom: 30px;
+        left: 20px;
+        right: unset;
+    }
+}
